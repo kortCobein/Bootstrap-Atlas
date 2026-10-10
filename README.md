@@ -50,7 +50,7 @@ php -S localhost:8080 -t examples/php
 
 ## Atlas clásico 2.4
 
-El Atlas 2.4 (263 demos, 80 SVG y 8 plantillas) se desarrolló como un HTML independiente **antes** de inicializar este repositorio. Para usarlo en la nueva web, coloca el archivo `bootstrap-atlas-2.4.html` en `apps/web/public/legacy/atlas.html`. El portal ofrece un acceso a su laboratorio legado y explica cuando falta ese archivo. No se afirma que el catálogo antiguo esté ya migrado a React; su migración a componentes nativos es una tarea posterior.
+El Atlas 2.4 original (263 demos, 80 SVG y 8 plantillas) está **incluido en el repositorio** como `apps/web/public/legacy/atlas.html`. Puedes abrirlo desde **Recursos → Atlas clásico** o directamente en `http://localhost:5173/legacy/atlas.html`. La app React incorpora un acceso y una previsualización del HTML original, sin modificar su código ni sus 263 ejemplos. Su migración progresiva a componentes React nativos sigue pendiente.
 
 ## Arquitectura y límites
 

@@ -19,5 +19,5 @@ Laboratorios independientes
 2. No se ejecuta código de usuarios en el proceso React; la vista previa del documento exportado se encapsula.
 3. Compatibilidad con Bootstrap y exportación estática sin servidor.
 4. Las demostraciones de Angular, React, Express y PHP tienen arranques independientes.
-5. El legado v2.4 se integra como documento separado para no mezclar estilos globales y listeners del antiguo Atlas.
+5. El legado v2.4 se incluye bajo `apps/web/public/legacy/atlas.html` como documento separado para evitar conflictos entre sus estilos globales y React. La versión empaquetada se abre desde la propia interfaz.
 6. API opcional: el Studio debe abrir aun cuando Express no esté activo.
