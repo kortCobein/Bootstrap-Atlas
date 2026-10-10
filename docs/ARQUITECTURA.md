@@ -5,6 +5,7 @@ Navegador
   └── apps/web (Vite + React + TypeScript)
         ├── Studio: canvas, biblioteca, editor de propiedades y capas
         ├── Catálogo: componentes Bootstrap e iconos
+        ├── Playground: HTML, CSS y JS aislados
         ├── Guías: snippets multi-framework
         ├── Exportador: HTML/CSS/ZIP local con JSZip
         └── API opcional --> apps/api (Node.js + Express)

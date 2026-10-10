@@ -44,6 +44,7 @@ php -S localhost:8080 -t examples/php
 - Editor visual drag and drop con inspector por elemento, árbol de capas, vista responsive, undo/redo, duplicación, JSON, HTML, CSS y exportación ZIP.
 - Presets de páginas y bloques: héroe, navegación, tarjetas, texto, imágenes, CTA, formularios, galerías, footer y secciones.
 - Biblioteca Bootstrap con búsqueda, iconos, ejemplos y edición de propiedades.
+- Code Playground con HTML, CSS y JavaScript en vivo, previsualización con iframe aislado, presets y exportación HTML/ZIP.
 - Laboratorio de stack y snippets para React, Angular, TypeScript, Express, PHP y Bootstrap.
 - Tema oscuro, motion accesible y navegación con transiciones.
 - Persistencia del proyecto de diseño en localStorage.

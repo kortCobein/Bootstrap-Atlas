@@ -136,6 +136,7 @@ export function Home({go,choose}:{go:(v:string)=>void;choose:(t:TemplateDefiniti
    ['templates','Plantillas','Sitios de inicio para ecommerce, SaaS y dashboards.','bi-window'],
    ['icons','Iconografía','Bootstrap Icons con búsqueda y copia.','bi-stars'],
    ['motion','Motion Lab','Hover, neón, gradientes y cursores alternativos.','bi-lightning'],
+   ['playground','Code Playground','HTML, CSS y JavaScript en vivo y con exportación.','bi-terminal'],
    ['stacks','Framework Hub','React, Angular, Express, PHP, Node y más.','bi-code-slash']
   ].map(x=><button className="atlas-feature-card" key={x[0]} onClick={()=>go(x[0])}><span className="atlas-feature-icon"><i className={'bi '+x[3]}/></span><h3>{x[1]}</h3><p>{x[2]}</p><span>Explorar <ArrowRight size={15}/></span></button>)}</div>
   <div className="atlas-section-heading"><div><span className="atlas-eyebrow">PROYECTOS</span><h2>Empieza con una plantilla.</h2></div><button className="atlas-text-button" onClick={()=>go('templates')}>Ver todas <ArrowRight size={17}/></button></div>

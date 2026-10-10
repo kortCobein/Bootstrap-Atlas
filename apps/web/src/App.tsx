@@ -1,6 +1,7 @@
 import {useState} from 'react';
-import {ArrowUpRight,ChevronRight,CodeXml,ExternalLink,GalleryVerticalEnd,House,LayoutTemplate,Menu,Monitor,MousePointer2,PanelLeftClose,PanelLeftOpen,Search,Shapes,Sparkles,WandSparkles,X} from 'lucide-react';
+import {ArrowUpRight,ChevronRight,CodeXml,ExternalLink,GalleryVerticalEnd,House,FlaskConical,LayoutTemplate,Menu,Monitor,MousePointer2,PanelLeftClose,PanelLeftOpen,Search,Shapes,Sparkles,WandSparkles,X} from 'lucide-react';
 import Editor from './Editor';
+import Playground from './Playground';
 import {Components,Home,IconsLab,Legacy,MotionLab,Stacks,Templates} from './Views';
 import type {BlockKind,TemplateDefinition} from './types';
 const groups=[
@@ -12,11 +13,12 @@ const groups=[
  {label:'CREATIVE TOOLS',items:[
   {id:'icons',name:'Iconos',icon:Sparkles},
   {id:'motion',name:'Animaciones',icon:MousePointer2},
+  {id:'playground',name:'Code Playground',icon:FlaskConical},
   {id:'stacks',name:'Frameworks',icon:CodeXml}]},
  {label:'RECURSOS',items:[
   {id:'legacy',name:'Atlas clásico 2.4',icon:GalleryVerticalEnd}]}
 ];
-const labels:Record<string,string>={home:'Inicio',editor:'Diseñador visual',components:'Biblioteca de componentes',templates:'Plantillas',icons:'Iconos',motion:'Animaciones y cursores',stacks:'Frameworks',legacy:'Atlas clásico'};
+const labels:Record<string,string>={home:'Inicio',editor:'Diseñador visual',components:'Biblioteca de componentes',templates:'Plantillas',icons:'Iconos',motion:'Animaciones y cursores',stacks:'Frameworks',playground:'Code Playground',legacy:'Atlas clásico'};
 function App(){
  const [page,setPage]=useState('home');
  const [sidebar,setSidebar]=useState(false);
@@ -44,6 +46,7 @@ function App(){
     {page==='templates'&&<Templates onChoose={choose}/>}
     {page==='icons'&&<IconsLab/>}
     {page==='motion'&&<MotionLab/>}
+    {page==='playground'&&<Playground/>}
     {page==='stacks'&&<Stacks/>}
     {page==='legacy'&&<Legacy/>}
     </div>
