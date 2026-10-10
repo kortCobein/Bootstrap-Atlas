@@ -1,7 +1,7 @@
 import JSZip from 'jszip';
 import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css?raw';
 import bootstrapJs from 'bootstrap/dist/js/bootstrap.bundle.min.js?raw';
-import type {AtlasProject,PageBlock,BlockStyle} from './types';
+import type {AtlasProject,PageBlock} from './types';
 const esc=(v:string)=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;");
 const cssValue=(v:string)=>v.replace(/[<>;{}]/g,'');
 const safeUrl=(u:string)=>/^(https?:\/\/|data:image\/(png|jpeg|gif|webp|svg\+xml);base64,|#|\/)/i.test(u)?esc(u):'#';

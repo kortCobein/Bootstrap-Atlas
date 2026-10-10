@@ -1,8 +1,7 @@
 import {useState} from 'react';
-import {ArrowUpRight,BookOpen,ChevronRight,CodeXml,ExternalLink,GalleryVerticalEnd,GraduationCap,House,Layers3,LayoutTemplate,Menu,Monitor,MousePointer2,PanelLeftClose,PanelLeftOpen,Search,Shapes,Sparkles,WandSparkles,X} from 'lucide-react';
+import {ArrowUpRight,ChevronRight,CodeXml,ExternalLink,GalleryVerticalEnd,House,LayoutTemplate,Menu,Monitor,MousePointer2,PanelLeftClose,PanelLeftOpen,Search,Shapes,Sparkles,WandSparkles,X} from 'lucide-react';
 import Editor from './Editor';
 import {Components,Home,IconsLab,Legacy,MotionLab,Stacks,Templates} from './Views';
-import {templates} from './data';
 import type {BlockKind,TemplateDefinition} from './types';
 const groups=[
  {label:'WORKSPACE',items:[

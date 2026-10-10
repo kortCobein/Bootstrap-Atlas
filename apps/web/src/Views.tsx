@@ -1,6 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {ArrowRight,BookOpen,Check,Code2,Copy,ExternalLink,FileCode2,FolderOpen,Layers3,MousePointer2,Play,Plus,Search,ShieldCheck,Upload} from 'lucide-react';
-import {components,stacks,templates} from './data';
+import {components,stacks,templates,createBlock,createProject} from './data';
+import {getHtml} from './export';
 import {cdns} from './export';
 import type {BlockKind,TemplateDefinition} from './types';
 const palette=['#43e6c5','#009d81','#7c69ed','#f26ba3','#ffb84b'];
@@ -37,7 +38,7 @@ export function Components({onAdd}:{onAdd:(k:BlockKind)=>void}){
  const [search,setSearch]=useState(''),[filter,setFilter]=useState('Todo'),[toast,setToast]=useState('');
  const types=['Todo',...new Set(components.map(c=>c.category))];
  const filtered=components.filter(c=>(filter==='Todo'||filter===c.category)&&(c.name+' '+c.description).toLowerCase().includes(search.toLowerCase()));
- function copy(kind:BlockKind){const c=components.find(x=>x.kind===kind);void navigator.clipboard.writeText('<!-- '+(c?.name??kind)+' -->\n<div class="container py-4">Componente '+kind+' — edita sus propiedades en Atlas Designer.</div>').then(()=>showToast(setToast,'Ejemplo copiado')).catch(()=>showToast(setToast,'Usa el editor para exportar'));}
+ function copy(kind:BlockKind){const project=createProject();project.name='Demo '+kind;project.blocks=[createBlock(kind)];void navigator.clipboard.writeText(getHtml(project,true)).then(()=>showToast(setToast,'HTML real del componente copiado')).catch(()=>showToast(setToast,'Usa el editor para exportar'));}
  return <div className="atlas-view atlas-enter">
   <div className="atlas-page-heading"><span className="atlas-eyebrow">LIBRERÍA · BOOTSTRAP 5</span><h1>Componentes que puedes tocar.</h1><p>Bloques editables, ejemplos funcionales y acceso directo al constructor visual.</p></div>
   <div className="atlas-library-toolbar"><label className="atlas-search"><Search size={17}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Buscar componentes..."/></label><div className="atlas-filters">{types.map(t=><button key={t} onClick={()=>setFilter(t)} className={filter===t?'active':''}>{t}</button>)}</div></div>

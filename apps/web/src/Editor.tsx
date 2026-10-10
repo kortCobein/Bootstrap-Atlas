@@ -1,6 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
-import {ArrowDown,ArrowUp,Check,ChevronDown,ChevronUp,Code2,Copy,Download,FileCode2,FileJson,FolderArchive,ImagePlus,Layers3,Monitor,Plus,Redo2,RotateCcw,Save,Smartphone,Tablet,Trash2,Undo2,Upload} from 'lucide-react';
-import {components,createBlock,createProject,defaultStyle,templates} from './data';
+import {ArrowDown,ArrowUp,Check,ChevronDown,Code2,Copy,Download,FileCode2,FileJson,ImagePlus,Layers3,Monitor,Plus,Redo2,RotateCcw,Save,Smartphone,Tablet,Trash2,Undo2,Upload} from 'lucide-react';
+import {components,createBlock,createProject,defaultStyle} from './data';
 import {downloadFile,downloadZip,getHtml,getCss,getJs} from './export';
 import type {AtlasProject,BlockKind,PageBlock,BlockStyle,TemplateDefinition,Motion} from './types';
 const STORAGE_KEY='atlas-studio-project-v3';
