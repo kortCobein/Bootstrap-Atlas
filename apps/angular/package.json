@@ -1,0 +1,24 @@
+{
+  "name": "@atlas/angular-lab",
+  "private": true,
+  "version": "3.0.0",
+  "scripts": {
+    "start": "ng serve --port 4200",
+    "build": "ng build"
+  },
+  "dependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "rxjs": "^7.8.1",
+    "zone.js": "^0.15.1",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.3.0",
+    "@angular/cli": "^20.3.0",
+    "@angular/compiler-cli": "^20.3.0",
+    "typescript": "~5.9.2"
+  }
+}
