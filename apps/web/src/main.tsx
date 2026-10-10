@@ -1,0 +1,10 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './styles.css';
+import App from './App';
+const root=document.getElementById('root');
+if(!root)throw Error('No se encontró #root');
+createRoot(root).render(<React.StrictMode><App/></React.StrictMode>);
