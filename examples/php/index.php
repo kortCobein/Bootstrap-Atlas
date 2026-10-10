@@ -4,7 +4,7 @@ session_start();
 $mensaje = '';
 $nombre = trim((string)($_POST['nombre'] ?? ''));
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if ($nombre === '' || mb_strlen($nombre) > 80) {
+  if ($nombre === '' || (function_exists('mb_strlen') ? mb_strlen($nombre) : strlen($nombre)) > 80) {
     $mensaje = 'Escribe un nombre de 1 a 80 caracteres.';
   } else {
     $_SESSION['nombre'] = $nombre;
