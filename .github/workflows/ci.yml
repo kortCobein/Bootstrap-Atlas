@@ -14,6 +14,16 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run check
       - run: npm run build
+      - name: Validate subdirectory deployment
+        run: |
+          node -e "const fs=require('fs'); const s=fs.readFileSync('apps/web/dist/index.html','utf8'); if (!s.includes('./assets/') || s.includes('src=\"/assets/') || s.includes('href=\"/assets/')) process.exit(1);"
+          test -f apps/web/dist/legacy/atlas.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atlas-dist
+          path: apps/web/dist/
+          if-no-files-found: error
+          retention-days: 30
   angular:
     runs-on: ubuntu-latest
     steps:
